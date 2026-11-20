@@ -16,21 +16,24 @@ window.APP_DOWNLOAD = {
       a.href = d.apk;
       a.setAttribute('download', '');
     });
-    // 填充信息字段
+    // 填充信息字段（元素不存在则跳过）
     var set = function (id, v) {
       var el = document.getElementById(id);
       if (el) el.textContent = v;
     };
+    set('d-version', 'v' + d.version);
+    set('d-size', d.size);
+    set('d-date', d.date);
+    set('cl-box', '本次更新内容\n' + d.changelog);
+    set('k-version', 'v' + d.version);
+    set('k-size', d.size);
+    set('k-date', d.date);
+    set('k-sha', d.sha256);
     set('v-name', 'v' + d.version);
     set('dl-meta', '当前最新 v' + d.version + ' · ' + d.size + ' · 更新于 ' + d.date);
-    set('k-version', 'v' + d.version);
-    set('k-date', d.date);
-    set('k-size', d.size);
-    set('k-sha', d.sha256);
     set('changelog-box', d.changelog);
-    set('cl-version', 'v' + d.version);
     set('changelog-list', d.changelog);
-    // SHA-256 复制
+    // SHA-256 复制按钮（兼容旧版页面）
     var btn = document.getElementById('copy-sha');
     if (btn) {
       btn.addEventListener('click', function () {
