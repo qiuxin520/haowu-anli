@@ -52,17 +52,17 @@ window.APP_DOWNLOAD_HARMONY = {
     // 所有 data-dl 占位链接指向 APK
     document.querySelectorAll('a[data-dl]').forEach(function (a) {
       a.href = d.apk;
-      a.setAttribute('download', '');
+      a.setAttribute('download', '好物安利_' + d.version + '.apk');
     });
     // 所有 data-dl-ios 占位链接指向 IPA
     document.querySelectorAll('a[data-dl-ios]').forEach(function (a) {
       a.href = ios.ipa;
-      a.setAttribute('download', '');
+      a.setAttribute('download', '好物安利_' + ios.version + '_巨魔版.ipa');
     });
     // 所有 data-dl-harmony 占位链接指向 HAP（后台地址，download 属性指定扩展名）
     document.querySelectorAll('a[data-dl-harmony]').forEach(function (a) {
       a.href = harmony.hap;
-      a.setAttribute('download', 'haowuanli_' + harmony.version + '_harmony.hap');
+      a.setAttribute('download', '好物安利_' + harmony.version + '_鸿蒙版.hap');
     });
     // 填充信息字段（元素不存在则跳过）
     var set = function (id, v) {
