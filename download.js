@@ -18,6 +18,16 @@ window.APP_DOWNLOAD_IOS = {
   changelog: '1. 线报页右上角新增分享按钮,分享内容附带页面链接'
 };
 
+// 鸿蒙版配置（HAP 524MB 超 GitHub Pages 单文件上限，托管在下载后台）
+window.APP_DOWNLOAD_HARMONY = {
+  version: '1.0.67',
+  date: '2026-11-22',
+  size: '186.7 MB',
+  hap: 'http://192.144.158.126:8082/files/apk/bd832471_haowuanli_1.0.67_harmony.hap.apk',
+  sha256: '7cbfe8cd934e1c86eeb9bafe9cbfdfe4eb0a078316470841cec472ebc4f3cf26',
+  changelog: '1. 鸿蒙原生版正式签名发布,支持 HarmonyOS NEXT'
+};
+
 (function () {
   function bindCopy(btnId, text) {
     var btn = document.getElementById(btnId);
@@ -34,8 +44,10 @@ window.APP_DOWNLOAD_IOS = {
   function apply() {
     var d = window.APP_DOWNLOAD;
     var ios = window.APP_DOWNLOAD_IOS;
+    var harmony = window.APP_DOWNLOAD_HARMONY;
     var isIOS = !!document.querySelector('a[data-dl-ios]');
-    var cur = isIOS ? ios : d;
+    var isHarmony = !!document.querySelector('a[data-dl-harmony]');
+    var cur = isHarmony ? harmony : (isIOS ? ios : d);
 
     // 所有 data-dl 占位链接指向 APK
     document.querySelectorAll('a[data-dl]').forEach(function (a) {
@@ -46,6 +58,11 @@ window.APP_DOWNLOAD_IOS = {
     document.querySelectorAll('a[data-dl-ios]').forEach(function (a) {
       a.href = ios.ipa;
       a.setAttribute('download', '');
+    });
+    // 所有 data-dl-harmony 占位链接指向 HAP（后台地址，download 属性指定扩展名）
+    document.querySelectorAll('a[data-dl-harmony]').forEach(function (a) {
+      a.href = harmony.hap;
+      a.setAttribute('download', 'haowuanli_' + harmony.version + '_harmony.hap');
     });
     // 填充信息字段（元素不存在则跳过）
     var set = function (id, v) {
@@ -65,6 +82,11 @@ window.APP_DOWNLOAD_IOS = {
     set('i-size', ios.size);
     set('i-date', ios.date);
     set('i-sha', ios.sha256);
+    // 鸿蒙
+    set('h-version', 'v' + harmony.version);
+    set('h-size', harmony.size);
+    set('h-date', harmony.date);
+    set('h-sha', harmony.sha256);
     // 通用（当前页面按平台取值）
     set('v-name', 'v' + cur.version);
     set('dl-meta', '当前最新 v' + cur.version + ' · ' + cur.size + ' · 更新于 ' + cur.date);
