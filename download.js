@@ -22,9 +22,9 @@ window.APP_DOWNLOAD_IOS = {
 window.APP_DOWNLOAD_HARMONY = {
   version: '1.0.67',
   date: '2026-11-22',
-  size: '186.7 MB',
-  hap: 'http://192.144.158.126:8082/files/apk/bd832471_haowuanli_1.0.67_harmony.hap.apk',
-  sha256: '7cbfe8cd934e1c86eeb9bafe9cbfdfe4eb0a078316470841cec472ebc4f3cf26',
+  size: '36.7 MB',
+  hap: 'http://192.144.158.126:8082/files/apk/f249dcc4_haowuanli_1.0.67_harmony_update.hap.apk',
+  sha256: '119c4ca5a0ff01d334dcca77e6580c54cbc8b01ad56ea2faec7d99d2dd702e1b',
   changelog: '1. 鸿蒙原生版正式签名发布,支持 HarmonyOS NEXT'
 };
 
