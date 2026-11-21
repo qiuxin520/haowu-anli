@@ -1,21 +1,21 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.67',
-  date: '2026-11-21',
+  version: '1.0.68',
+  date: '2026-11-22',
   size: '57.9 MB',
-  apk: 'dist/haowuanli_1.0.67.apk',
-  sha256: 'c2e6d0ec485f2f717c1735bc9ab270718d03754a895b3421c5dd7a237edc53ae',
-  changelog: '1. 线报页右上角新增分享按钮,分享内容附带页面链接'
+  apk: 'dist/haowuanli_1.0.68.apk',
+  sha256: 'b3dac08d8c03574043d8779325b7f78cf799a1e7f849c6d592a48136a0ca6f5c',
+  changelog: '1. 新增 App 内更新检测（含鸿蒙跳转下载页）\n2. 统一包名为 com.haowuanli.app'
 };
 
 // iOS 巨魔版配置
 window.APP_DOWNLOAD_IOS = {
-  version: '1.0.67',
-  date: '2026-11-21',
+  version: '1.0.68',
+  date: '2026-11-22',
   size: '20.0 MB',
-  ipa: 'dist/haowuanli_1.0.67_trollstore.ipa',
-  sha256: 'a86dd96f6236adc7d613fdd754a4efcf6e12a3b0c331fa4d2e9e704b95caef53',
-  changelog: '1. 线报页右上角新增分享按钮,分享内容附带页面链接'
+  ipa: 'dist/haowuanli_1.0.68_trollstore.ipa',
+  sha256: '87081b8dd9458869670d021be1f29fa2e2d35e85e485b12e6d4deca0bf3694cb',
+  changelog: '1. 新增 App 内更新检测（含鸿蒙跳转下载页）\n2. 统一包名为 com.haowuanli.app'
 };
 
 // 鸿蒙版配置（HAP 524MB 超 GitHub Pages 单文件上限，托管在下载后台）
