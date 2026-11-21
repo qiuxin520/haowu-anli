@@ -4,7 +4,7 @@ window.APP_DOWNLOAD = {
   date: '2026-11-22',
   size: '57.9 MB',
   apk: 'dist/haowuanli_1.0.68.apk',
-  sha256: 'b3dac08d8c03574043d8779325b7f78cf799a1e7f849c6d592a48136a0ca6f5c',
+  sha256: '83c57520fbaf7b8061029002048227db79361132451bd44310ddf1118c61b607',
   changelog: '1. 新增 App 内更新检测（含鸿蒙跳转下载页）\n2. 统一包名为 com.haowuanli.app'
 };
 
