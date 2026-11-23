@@ -1,31 +1,31 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.85',
+  version: '1.0.93',
   date: '2026-11-23',
   size: '57.9 MB',
-  apk: 'dist/haowuanli_1.0.85.apk',
-  sha256: '87320347029e6927e7418c0275cb99fccfe40b5f3b961b29ef020e33176fd75f',
-  changelog: '1. 修复AI搜索商品卡详情:主图灰色空白、点立即领券提示加载中的问题\n2. AI商品卡补齐轮播图与详情图,大淘客来源改走完整详情接口\n3. 好单库商品购买链接转链绑定自有PID'
+  apk: 'dist/haowuanli_1.0.93.apk',
+  sha256: 'ce94e98b8bda42344410ab035cc6b4bc86dc125d4a3d4de7b5664c67b80b15c8',
+  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
 };
 
 // iOS 巨魔版配置
 window.APP_DOWNLOAD_IOS = {
-  version: '1.0.85',
+  version: '1.0.93',
   date: '2026-11-23',
   size: '21.0 MB',
-  ipa: 'dist/haowuanli_1.0.85_trollstore.ipa',
-  sha256: '142cdd39195e9df42190bc6b40b020f6f46dbeb9ace6166addf5175369698288',
-  changelog: '1. 修复AI搜索商品卡详情:主图灰色空白、点立即领券提示加载中的问题\n2. AI商品卡补齐轮播图与详情图,大淘客来源改走完整详情接口\n3. 好单库商品购买链接转链绑定自有PID'
+  ipa: 'dist/haowuanli_1.0.93_trollstore.ipa',
+  sha256: '37647dbe480f24c0ce0dc9f70420afee316551d4b7b418ae89341d908fa48397',
+  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
 };
 
 // 鸿蒙版配置（HAP 231MB 超 GitHub Pages 单文件上限，托管在下载后台）
 window.APP_DOWNLOAD_HARMONY = {
-  version: '1.0.85',
+  version: '1.0.93',
   date: '2026-11-23',
-  size: '231 MB',
-  hap: 'http://192.144.158.126:8082/api/app-release/download/1156',
-  sha256: 'c95a707dfcc643397de57c3d6681692719d6309814321b3dcaa5fab9e690d5b6',
-  changelog: '1. 修复AI搜索商品卡详情:主图灰色空白、点立即领券提示加载中的问题\n2. AI商品卡补齐轮播图与详情图,大淘客来源改走完整详情接口\n3. 好单库商品购买链接转链绑定自有PID'
+  size: '252 MB',
+  hap: 'http://192.144.158.126:8082/api/app-release/download/1165',
+  sha256: '94ab5b01df5da7b146e536fe6fe7854af3c3bac2d630cc4355387f0d7d414b0d',
+  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
 };
 
 (function () {
