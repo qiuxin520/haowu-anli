@@ -1,31 +1,31 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.93',
-  date: '2026-11-23',
-  size: '57.9 MB',
-  apk: 'dist/haowuanli_1.0.93.apk',
-  sha256: 'ce94e98b8bda42344410ab035cc6b4bc86dc125d4a3d4de7b5664c67b80b15c8',
-  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
+  version: '1.0.98',
+  date: '2026-11-24',
+  size: '58.2 MB',
+  apk: 'dist/haowuanli_1.0.98.apk',
+  sha256: 'c3f616d6a119a5c16f5a8ec3374f8d0b180b7d55820b98d4071b7b9f59607623',
+  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
 };
 
 // iOS 巨魔版配置
 window.APP_DOWNLOAD_IOS = {
-  version: '1.0.93',
-  date: '2026-11-23',
-  size: '21.0 MB',
-  ipa: 'dist/haowuanli_1.0.93_trollstore.ipa',
-  sha256: '37647dbe480f24c0ce0dc9f70420afee316551d4b7b418ae89341d908fa48397',
-  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
+  version: '1.0.98',
+  date: '2026-11-24',
+  size: '20.2 MB',
+  ipa: 'dist/haowuanli_1.0.98_trollstore.ipa',
+  sha256: 'aa2ff2980afe6773b271f5bb4c36ef216703a3737d2f149da35b5cb319688c60',
+  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
 };
 
 // 鸿蒙版配置（HAP 231MB 超 GitHub Pages 单文件上限，托管在下载后台）
 window.APP_DOWNLOAD_HARMONY = {
-  version: '1.0.93',
-  date: '2026-11-23',
-  size: '252 MB',
-  hap: 'http://192.144.158.126:8082/api/app-release/download/1165',
-  sha256: '94ab5b01df5da7b146e536fe6fe7854af3c3bac2d630cc4355387f0d7d414b0d',
-  changelog: '1. AI导购商品只展示销量最高的前15条,其余引导到搜索页看全部\n2. 每次重新进入AI导购自动定位到对话底部\n3. 修复更新下载任务消失:重复点更新或重进App时复用进行中/已完成的下载,不再从头下'
+  version: '1.0.98',
+  date: '2026-11-24',
+  size: '263 MB',
+  hap: 'http://192.144.158.126:8082/api/app-release/download/1256',
+  sha256: '514085c6faf18ed2a8e500f177d13cbae9761adb34d2037da4b6cddc0e54684c',
+  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
 };
 
 (function () {
