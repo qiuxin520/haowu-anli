@@ -1,31 +1,31 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.98',
-  date: '2026-11-24',
-  size: '58.2 MB',
-  apk: 'dist/haowuanli_1.0.98.apk',
-  sha256: 'c3f616d6a119a5c16f5a8ec3374f8d0b180b7d55820b98d4071b7b9f59607623',
-  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
+  version: '1.02.3',
+  date: '2026-11-27',
+  size: '62.5 MB',
+  apk: 'dist/haowuanli_1.02.3.apk',
+  sha256: 'b11b749dbdb35b897cf3254c734162b8603b6259b2aa58923230ade7bd30d4b4',
+  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
 };
 
 // iOS 巨魔版配置
 window.APP_DOWNLOAD_IOS = {
-  version: '1.0.98',
-  date: '2026-11-24',
-  size: '20.2 MB',
-  ipa: 'dist/haowuanli_1.0.98_trollstore.ipa',
-  sha256: 'aa2ff2980afe6773b271f5bb4c36ef216703a3737d2f149da35b5cb319688c60',
-  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
+  version: '1.02.3',
+  date: '2026-11-27',
+  size: '25.0 MB',
+  ipa: 'dist/haowuanli_1.02.3_trollstore.ipa',
+  sha256: '38232ff2e62a483551682011be982f5f9af55589986b06a0a1a101373995e6ce',
+  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
 };
 
 // 鸿蒙版配置（HAP 231MB 超 GitHub Pages 单文件上限，托管在下载后台）
 window.APP_DOWNLOAD_HARMONY = {
-  version: '1.0.98',
-  date: '2026-11-24',
-  size: '263 MB',
-  hap: 'http://192.144.158.126:8082/api/app-release/download/1256',
-  sha256: '514085c6faf18ed2a8e500f177d13cbae9761adb34d2037da4b6cddc0e54684c',
-  changelog: '1. 新增美团外卖、淘宝闪购频道:首页独立入口,领红包领券活动\n2. 搜索页全网搜风格+多平台切换,AI导购自动识别预算\n3. 优化外卖宫格图标为贴纸风格'
+  version: '1.02.3',
+  date: '2026-11-27',
+  size: '307 MB',
+  hap: 'http://192.144.158.126:8082/api/app-release/download/1604',
+  sha256: 'f54abedae2f1461ec5f3c08589e3d1c5296a28038210a2d3434b22935e135509',
+  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
 };
 
 (function () {
