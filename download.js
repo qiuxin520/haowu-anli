@@ -14,8 +14,8 @@ window.APP_DOWNLOAD_IOS = {
   date: '2026-11-27',
   size: '25.0 MB',
   ipa: 'dist/haowuanli_1.02.3_trollstore.ipa',
-  sha256: '38232ff2e62a483551682011be982f5f9af55589986b06a0a1a101373995e6ce',
-  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
+  sha256: '3555c65b6ab56540db4fff52d57d2a67cbb61be29457f6d835b0858b2e1446f9',
+  changelog: '1. 修复iOS点击QQ群要点好多下才响应,改为直接浏览器打开加群页\n2. 修复京东/拼多多功能图标和banner点击无反应\n3. QQ群链接后台可配置,WebView首屏黑屏修复'
 };
 
 // 鸿蒙版配置（HAP 231MB 超 GitHub Pages 单文件上限，托管在下载后台）
