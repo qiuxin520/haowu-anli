@@ -32,6 +32,8 @@ window.APP_DOWNLOAD_HARMONY = {
   function bindCopy(btnId, text) {
     var btn = document.getElementById(btnId);
     if (btn) {
+      if (btn.__copyBound) return;
+      btn.__copyBound = true;
       btn.addEventListener('click', function () {
         navigator.clipboard.writeText(text).then(function () {
           btn.textContent = '已复制 ✓';
@@ -95,6 +97,8 @@ window.APP_DOWNLOAD_HARMONY = {
     // SHA-256 复制按钮
     bindCopy('copy-sha', cur.sha256);
   }
+  // 暴露给外部重新渲染（index.html 拿到后台实时版本后会再调一次）
+  window.__applyDownload = apply;
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', apply);
   } else {

@@ -2,6 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="好物安利安卓版下载：领券再下单，羊毛线报、淘口令识别、大额优惠券，一个好用的省钱购物助手。">
 <title>好物安利 · 安卓版下载</title>
@@ -245,6 +248,48 @@
   </div>
 </footer>
 
-<script src="download.js"></script>
+<!-- 配置加载:不缓存地取 download.js(兜底),再用后台实时接口覆盖安卓版本信息,
+     这样发版后打开页面立刻是新包,GitHub Pages 的 CDN 缓存也拦不住 -->
+<script>
+(function () {
+  var API = 'https://520596.xyz/api/app-release/latest?platform=android&versionName=0.0.1';
+  var bust = function (u) { return u + (u.indexOf('?') > -1 ? '&' : '?') + 't=' + Date.now(); };
+
+  function loadStatic() {
+    return fetch(bust('download.js'), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('cfg ' + r.status); return r.text(); })
+      .then(function (txt) { (new Function(txt))(); })
+      .catch(function () {
+        // 极端情况(fetch 被拦)才退回普通 script 标签,这时可能命中 CDN 缓存
+        return new Promise(function (res) {
+          var s = document.createElement('script');
+          s.src = 'download.js'; s.onload = res; s.onerror = res;
+          document.body.appendChild(s);
+        });
+      });
+  }
+
+  function mergeLive() {
+    return fetch(bust(API), { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        var d = j && j.data;
+        if (!d || !d.latestVersion || !d.downloadUrl || !window.APP_DOWNLOAD) return;
+        var cfg = window.APP_DOWNLOAD;
+        var sameVer = cfg.version === d.latestVersion;
+        cfg.version = d.latestVersion;
+        cfg.apk = d.downloadUrl;
+        if (d.packageSize) cfg.size = (d.packageSize / 1048576).toFixed(1) + ' MB';
+        if (d.changelog) cfg.changelog = d.changelog;
+        if (d.publishTime) cfg.date = String(d.publishTime).slice(0, 10);
+        cfg.sha256 = sameVer ? cfg.sha256 : '（新包，见安装包本体）';
+        if (window.__applyDownload) window.__applyDownload();
+      })
+      .catch(function () { /* 接口不可用时保留静态配置 */ });
+  }
+
+  loadStatic().then(mergeLive);
+})();
+</script>
 </body>
 </html>

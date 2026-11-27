@@ -2,6 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="好物安利 iOS 巨魔版下载：通过 TrollStore 免签安装，领券再下单，羊毛线报、淘口令识别、大额优惠券，一个好用的省钱购物助手。">
 <title>好物安利 · iOS 巨魔版下载</title>
@@ -241,6 +244,40 @@
   </div>
 </footer>
 
-<script src="download.js"></script>
+<!-- 配置加载:不缓存取 download.js(兜底),再用后台实时接口覆盖 iOS 版本信息 -->
+<script>
+(function () {
+  var API = 'https://520596.xyz/api/app-release/latest?platform=ios&versionName=0.0.1';
+  var bust = function (u) { return u + (u.indexOf('?') > -1 ? '&' : '?') + 't=' + Date.now(); };
+  function loadStatic() {
+    return fetch(bust('download.js'), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('cfg'); return r.text(); })
+      .then(function (txt) { (new Function(txt))(); })
+      .catch(function () {
+        return new Promise(function (res) {
+          var s = document.createElement('script');
+          s.src = 'download.js'; s.onload = res; s.onerror = res;
+          document.body.appendChild(s);
+        });
+      });
+  }
+  function mergeLive() {
+    return fetch(bust(API), { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        var d = j && j.data, cfg = window.APP_DOWNLOAD_IOS;
+        if (!d || !d.latestVersion || !d.downloadUrl || !cfg) return;
+        cfg.version = d.latestVersion;
+        cfg.ipa = d.downloadUrl;
+        if (d.packageSize) cfg.size = (d.packageSize / 1048576).toFixed(1) + ' MB';
+        if (d.changelog) cfg.changelog = d.changelog;
+        if (d.publishTime) cfg.date = String(d.publishTime).slice(0, 10);
+        if (window.__applyDownload) window.__applyDownload();
+      })
+      .catch(function () {});
+  }
+  loadStatic().then(mergeLive);
+})();
+</script>
 </body>
 </html>
