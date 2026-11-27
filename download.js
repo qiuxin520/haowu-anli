@@ -1,11 +1,11 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.1',
+  version: '1.0.2',
   date: '2026-11-28',
   size: '62.7 MB',
-  apk: 'dist/haowuanli_1.0.1.apk',
-  sha256: '1bc5590e55db10b68a9be3f7811b8bb49bd9f586af26b1cf57ff2c34f1903691',
-  changelog: '1. 新增省钱助手:商品卡一键看省钱攻略/跨平台比价/商品百科\n2. AI导购接入DeepSeek大模型,回答更自然更懂商品\n3. 收藏/足迹/搜索结果页商品卡均可直接唤起省钱助手'
+  apk: 'dist/haowuanli_1.0.2.apk',
+  sha256: '79667e04cd212b4208ecc50df7c521161429916a6044e6e50348fd4d97fe2cdc',
+  changelog: 'AI导购「以图搜同款」支持直接选相册图片|发消息后自动收起键盘,回复不被输入法挡住|商品详情页底部新增「省钱」入口(攻略/比价/百科)'
 };
 
 // iOS 巨魔版配置
