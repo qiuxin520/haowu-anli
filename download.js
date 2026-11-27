@@ -1,11 +1,11 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.0.0',
-  date: '2026-11-27',
-  size: '62.5 MB',
-  apk: 'dist/haowuanli_1.0.0.apk',
-  sha256: '907f6e1d6a659eb94611e78a350cc53babf2ade5eab507054206b979e147fc3f',
-  changelog: '1. 服务器迁移新节点,全面启用HTTPS加密,更快更安全\n2. iOS点QQ群改为直接浏览器打开\n3. 修复京东/拼多多功能图标和banner点击无反应'
+  version: '1.0.1',
+  date: '2026-11-28',
+  size: '62.7 MB',
+  apk: 'dist/haowuanli_1.0.1.apk',
+  sha256: '1bc5590e55db10b68a9be3f7811b8bb49bd9f586af26b1cf57ff2c34f1903691',
+  changelog: '1. 新增省钱助手:商品卡一键看省钱攻略/跨平台比价/商品百科\n2. AI导购接入DeepSeek大模型,回答更自然更懂商品\n3. 收藏/足迹/搜索结果页商品卡均可直接唤起省钱助手'
 };
 
 // iOS 巨魔版配置
