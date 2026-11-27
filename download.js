@@ -23,7 +23,7 @@ window.APP_DOWNLOAD_HARMONY = {
   version: '1.02.3',
   date: '2026-11-27',
   size: '307 MB',
-  hap: 'http://192.144.158.126:8082/api/app-release/download/1604',
+  hap: 'http://520596.xyz:8082/api/app-release/download/1604',
   sha256: 'f54abedae2f1461ec5f3c08589e3d1c5296a28038210a2d3434b22935e135509',
   changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
 };
