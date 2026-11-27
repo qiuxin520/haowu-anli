@@ -1,31 +1,31 @@
 // 好物安利下载配置 —— 每次发新版只改这个文件
 window.APP_DOWNLOAD = {
-  version: '1.02.3',
+  version: '1.0.0',
   date: '2026-11-27',
   size: '62.5 MB',
-  apk: 'dist/haowuanli_1.02.3.apk',
-  sha256: 'b11b749dbdb35b897cf3254c734162b8603b6259b2aa58923230ade7bd30d4b4',
-  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
+  apk: 'dist/haowuanli_1.0.0.apk',
+  sha256: '907f6e1d6a659eb94611e78a350cc53babf2ade5eab507054206b979e147fc3f',
+  changelog: '1. 服务器迁移新节点,全面启用HTTPS加密,更快更安全\n2. iOS点QQ群改为直接浏览器打开\n3. 修复京东/拼多多功能图标和banner点击无反应'
 };
 
 // iOS 巨魔版配置
 window.APP_DOWNLOAD_IOS = {
-  version: '1.02.3',
+  version: '1.0.0',
   date: '2026-11-27',
   size: '25.0 MB',
-  ipa: 'dist/haowuanli_1.02.3_trollstore.ipa',
-  sha256: '3555c65b6ab56540db4fff52d57d2a67cbb61be29457f6d835b0858b2e1446f9',
-  changelog: '1. 修复iOS点击QQ群要点好多下才响应,改为直接浏览器打开加群页\n2. 修复京东/拼多多功能图标和banner点击无反应\n3. QQ群链接后台可配置,WebView首屏黑屏修复'
+  ipa: 'dist/haowuanli_1.0.0_trollstore.ipa',
+  sha256: '2f6ec648ec959e4b482d0ba8ab55edb92fa0ff7899c672ea345f04c3a5856ec4',
+  changelog: '1. 服务器迁移新节点,全面启用HTTPS加密,更快更安全\n2. iOS点QQ群改为直接浏览器打开\n3. 修复京东/拼多多功能图标和banner点击无反应'
 };
 
 // 鸿蒙版配置（HAP 231MB 超 GitHub Pages 单文件上限，托管在下载后台）
 window.APP_DOWNLOAD_HARMONY = {
-  version: '1.02.3',
+  version: '1.0.0',
   date: '2026-11-27',
   size: '307 MB',
-  hap: 'http://520596.xyz:8082/api/app-release/download/1604',
-  sha256: 'f54abedae2f1461ec5f3c08589e3d1c5296a28038210a2d3434b22935e135509',
-  changelog: '1. 修复京东/拼多多功能图标和banner点击无反应\n2. QQ群链接改为后台可配置,点击直接拉起QQ\n3. 修复WebView首屏黑屏,专题页数据加载优化'
+  hap: 'https://520596.xyz/api/app-release/download/1654',
+  sha256: '5685c76cd6ec6259323e5d392cfede825097436e6eeef41918dd93cfa1e7ea0e',
+  changelog: '1. 服务器迁移新节点,全面启用HTTPS加密,更快更安全\n2. iOS点QQ群改为直接浏览器打开\n3. 修复京东/拼多多功能图标和banner点击无反应'
 };
 
 (function () {
